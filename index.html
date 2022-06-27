@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <button id="button">click me</button>
+    <script>
+        $("#button").click(function () {
+            $.get("http://localhost:3000/api", function (data, status) {
+                df = Object.values(data)
+                max = Math.max(...df);
+                console.log(getKeyByValue(data, max))
+                //console.log(data);
+            });
+        });
+        function getKeyByValue(object, value) {
+            return Object.keys(object).find(key => object[key] === value);
+        }
+    </script>
+</body>
+
+</html>
