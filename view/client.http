@@ -1,0 +1,23 @@
+###get data
+GET http://localhost:3000/api
+###get data
+GET http://localhost:3000/api/data/Wagamon
+###get data
+GET http://localhost:3000/api/all
+###get data
+POST  http://localhost:3000/api
+content-type: application/json
+
+{
+  "place":"Vannappuram",
+  "count":25
+}
+###get data
+GET http://localhost:3000/api/bus
+###
+POST  http://localhost:3000/api/bus
+content-type: application/json
+
+{
+  "count":1
+}
